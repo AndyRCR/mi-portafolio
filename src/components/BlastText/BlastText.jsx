@@ -17,7 +17,7 @@ const BlastText = ({ text }) => {
         })
 
         let a = 0;
-        $(".blast").each(function () {
+        $(".home-page .blast").each(function () {
             if (a === 300) {
                 a = 400;
             }
@@ -39,10 +39,10 @@ const BlastText = ({ text }) => {
             }
         });
         setTimeout(function () {
-            $(".blast").removeClass("animated bounceIn");
-            $(".blast").css("opacity", 1);
+            $(".home-page .blast").removeClass("animated bounceIn");
+            $(".home-page .blast").css("opacity", 1);
 
-            $(".blast").mouseenter(function () {
+            $(".home-page .blast").mouseenter(function () {
                 var el = $(this);
 
                 $(this).addClass("animated rubberBand");
