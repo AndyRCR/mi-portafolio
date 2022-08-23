@@ -1,0 +1,153 @@
+:root {
+    --navbarBorderLight: #d8d8d8;
+    --navbarBorderDark: #282828;
+}
+
+.navbar{
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    lefT: 0;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar.light{
+    background-color: #F9F9F9;
+    border-right: 1px solid var(--navbarBorderLight);
+}
+
+.navbar.dark{
+    background-color: #191919;
+    border-right: none;
+}
+
+.light .navbarLogo{
+    background-color: #fff;
+}
+
+.dark .navbarLogo{
+    background-color: #000;
+}
+
+.navbarImage{
+    width: 100%;
+    height: 150px;
+    transition: var(--transition);
+    background-size: cover;
+}
+
+.light .navbarImage{
+    background-image: url('https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/logoBlack.png');
+}
+
+.dark .navbarImage{
+    background-image: url('https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/logoWhite.png');
+}
+
+.navbarTitle{
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.light .navbarTitle{
+    color: #000;
+}
+
+.dark .navbarTitle{
+    color: #fff;
+}
+
+.navbar.light ul{
+    border-top: 1px solid var(--navbarBorderLight);
+}
+
+.navbar.dark ul{
+    border-top: 1px solid var(--navbarBorderDark);
+}
+
+.navbar li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    font-weight: bold;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.navbar.light li{
+    border-bottom: 1px solid var(--navbarBorderLight);
+}
+
+.navbar.light .navLink{
+    color: #000;
+}
+
+.navbar.light li:hover{
+    font-size: 18px;
+    background-color: var(--navbarBorderLight);
+}
+
+.navLink{
+    text-decoration: none;
+}
+
+.navbar.dark .navLink{
+    color: #fff;
+}
+
+.navbar.dark li:hover{
+    color: #08FDD8;
+}
+
+.navbar.dark li{
+    border-bottom: 1px solid var(--navbarBorderDark);
+    color: #fff;
+}
+
+.navbarSocial{
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.navbarSocial a{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.navbarIcon{
+    margin: 20px 0;
+    transition: var(--transition);
+}
+
+.navbarIcon:hover{
+    transform: scale(1.4);
+}
+
+.light .navbarIcon{
+    color: #000;
+}
+
+.dark .navbarSocial a:nth-child(1){
+    color: #0077B7;
+}
+
+.dark .navbarSocial a:nth-child(2){
+    color: #fff;
+}
+
+.dark .navbarSocial a:nth-child(3){
+    color: #1E81D8;
+}

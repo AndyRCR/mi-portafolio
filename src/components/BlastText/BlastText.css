@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700,800");
+
+.home-page .blast {
+  opacity: 0;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.home-page .blast:hover {
+  color: #08FDD8;
+}

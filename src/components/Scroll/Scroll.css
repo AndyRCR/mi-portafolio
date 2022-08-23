@@ -1,0 +1,37 @@
+.scroll{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.scrollItem{
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    font-size: 20px;
+}
+
+.light .scrollItem{
+    color: #000;
+}
+
+.dark .scrollItem{
+    color: #fff;
+}
+
+.scrollText{
+    margin: 10px 0;
+    animation: scrollAnimation 1s linear infinite;
+}
+
+@keyframes scrollAnimation{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,91 @@
+.contact{
+    padding: 30px;
+    width: calc(100% - 150px);
+    float: right;
+    height: 100vh;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact.light {
+    background-color: #fcfcfc;
+}
+
+.contact.dark {
+background-color: #1e1e1e;
+}
+
+.contact .page{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .text-zone{
+    text-align: center;
+}
+
+.contact p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact.light h1 span,
+.contact.light p {
+  color: #000;
+}
+
+.contact.dark h1 span,
+.contact.dark p {
+  color: #fff;
+}
+
+.contact form{
+    width: 65%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .formLine{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact input, .contact textarea{
+    margin: 15px 20px;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    padding: 15px 15px;
+    outline: none;
+    transition: var(--transition);
+    font-size: 20px;
+}
+
+.contact.dark input,
+.contact.dark textarea{
+    background-color: #2B2B2B;
+    color: #fff;
+}
+
+.contact input[name="name"],
+.contact input[name="email"]{
+    width: 50%;
+}
+
+.contact input[name="subject"]{
+    width: 100%;
+}
+
+.contact textarea{
+    width: 100%;
+    min-height: 120px;
+}

@@ -1,0 +1,54 @@
+.techs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.techs h3{
+    margin: 20px 0 10px;
+}
+
+.techs.light h3{
+    color: #000;
+}
+
+.techs.dark h3{
+    color: #fff;
+}
+
+.frontend, .backend, .extra{
+    border-radius: 20px;
+    height: 120px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.light .frontend, .light .backend, .light .extra{border: 1px solid #707070;}
+.dark .frontend, .dark .backend, .dark .extra{border: 1px solid #fff;}
+
+.extra{
+    height: 270px;
+}
+
+.techs img{
+    width: 50px;
+    transition: 0.2s;
+}
+
+.techs img:hover{
+    transform: scale(1.2);
+}
+
+.techItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.techItem p{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
