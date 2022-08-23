@@ -10,17 +10,15 @@ const Principal = () => {
   const { theme } = useContext(GlobalContext)
 
   useEffect(() => {
-    return () => {
-      new Blast('.blast-root', {
-        returnGenerated: true,
-        delimiter: 'character',
-        search: false,
-        customClass: '',
-        aria: true,
-        debug: false,
-        name: 'blast'
-      })
-    }
+    new Blast('.blast-root', {
+      returnGenerated: true,
+      delimiter: 'character',
+      search: false,
+      customClass: '',
+      aria: true,
+      debug: false,
+      name: 'blast'
+    })
   }, [theme])
 
   return (
