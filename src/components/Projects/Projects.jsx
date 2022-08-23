@@ -10,8 +10,9 @@ const Projects = () => {
 
   const { theme } = useContext(GlobalContext)
 
-    useEffect(() => {
-        new Blast('.blast-root', {
+  useEffect(() => {
+    return () => {
+      new Blast('.blast-root', {
         returnGenerated: true,
         delimiter: 'character',
         search: false,
@@ -19,12 +20,13 @@ const Projects = () => {
         aria: true,
         debug: false,
         name: 'blast'
-        })
-    }, [theme])
+      })
+    }
+  }, [theme])
 
   return (
     <div className={`projects ${theme}`}>
-      <Switch/>
+      <Switch />
 
       <div className="page">
         <div className="container home-page">
@@ -39,7 +41,7 @@ const Projects = () => {
               <h3>La Tienda Pe'</h3>
               <div>
                 <a href="https://la-tienda-pe-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/tiendape_reduced.mp4" autoPlay loop muted/>
+                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/tiendape_reduced.mp4" autoPlay loop muted />
                 </a>
                 <p>
                   First project in React, developed for the
@@ -47,7 +49,7 @@ const Projects = () => {
                   at Coderhouse.
                 </p>
               </div>
-              <p>               
+              <p>
                 Technologies used: React, Cloud
                 Firestore, Material-UI, EmailJS
               </p>
@@ -57,7 +59,7 @@ const Projects = () => {
               <h3>Foxbel Music Player</h3>
               <div>
                 <a href="https://foxbel-music-player-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/foxbel_reduced.mp4" autoPlay loop muted/>
+                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/foxbel_reduced.mp4" autoPlay loop muted />
                 </a>
                 <p>
                   Music player with responsive design,
@@ -74,7 +76,7 @@ const Projects = () => {
               <h3>Weather Admin Panel</h3>
               <div>
                 <a href="https://weather-app-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/weatherapp_reduced.mp4" autoPlay loop muted/>
+                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/weatherapp_reduced.mp4" autoPlay loop muted />
                 </a>
                 <p>
                   Application that simulates an
@@ -91,11 +93,11 @@ const Projects = () => {
           </div>
 
           <div className='projectsLine'>
-            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500"  data-aos-delay="1000">
+            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="1000">
               <h3>Peko Cinema</h3>
               <div>
                 <a href="https://peko-cinema-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/peko_reduced.mp4" autoPlay loop muted/>
+                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/peko_reduced.mp4" autoPlay loop muted />
                 </a>
                 <p>
                   Web app that simulates the flow of
@@ -113,7 +115,7 @@ const Projects = () => {
               <h3>Untels Landing Page</h3>
               <div>
                 <a href="https://untels-lp-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/untels_reduced.mp4" autoPlay loop muted/>
+                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/untels_reduced.mp4" autoPlay loop muted />
                 </a>
                 <p>
                   Immersive Landing Page of my university
@@ -131,7 +133,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <Scroll/>
+      <Scroll />
     </div>
   )
 }
