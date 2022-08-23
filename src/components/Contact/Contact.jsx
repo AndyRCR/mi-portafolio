@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../../context/GlobalStateContext'
 import Switch from '../Switch/Switch'
-import Blast from 'blast-vanilla'
 import BlastText from '../BlastText/BlastText'
 import './Contact.css'
 
@@ -10,15 +9,6 @@ const Contact = () => {
     const { theme } = useContext(GlobalContext)
 
     useEffect(() => {
-        new Blast('.blast-root', {
-            returnGenerated: true,
-            delimiter: 'character',
-            search: false,
-            customClass: '',
-            aria: true,
-            debug: false,
-            name: 'blast'
-        })
     }, [theme])
 
     return (

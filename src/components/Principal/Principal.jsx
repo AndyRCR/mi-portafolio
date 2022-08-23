@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../../context/GlobalStateContext'
 import Switch from '../Switch/Switch'
 import './Principal.css'
-import Blast from 'blast-vanilla'
 import BlastText from '../BlastText/BlastText'
 import Scroll from '../Scroll/Scroll'
 
