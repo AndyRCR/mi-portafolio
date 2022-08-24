@@ -5,70 +5,45 @@ import Blast from 'blast-vanilla'
 
 const BlastText = ({ text }) => {
 
-    useEffect(() => {
-        new Blast('.blast-root', {
-            returnGenerated: true,
-            delimiter: 'character',
-            search: false,
-            customClass: '',
-            aria: true,
-            debug: false,
-            name: 'blast'
-        })
-        
-        for (let i = 1; i <= 4; i++) {
-            let a = 0;
+    new Blast('.blast-root', {
+        returnGenerated: true,
+        delimiter: 'character',
+        search: false,
+        customClass: '',
+        aria: true,
+        debug: false,
+        name: 'blast'
+    })
+    
+    for (let i = 1; i <= 4; i++) {
+        let a = 0;
 
-            $(`.home-page-${i} .blast`).each(function () {
-                if (a === 300) {
-                    a = 400;
-                }
+        $(`.home-page-${i} .blast`).each(function () {
+            if (a === 300) {
+                a = 400;
+            }
 
-                if (a === 1200) {
-                    a = 1400;
-                }
+            if (a === 1200) {
+                a = 1400;
+            }
 
-                var el = $(this);
-
-                setTimeout(function () {
-                    el.addClass("animated bounceIn");
-                }, a);
-
-                if (a < 1200) {
-                    a = a + 50;
-                } else {
-                    a = a + 35;
-                }
-            });
-            setTimeout(function () {
-                $(`.home-page-${i} .blast`).removeClass("animated bounceIn");
-                $(`.home-page-${i} .blast`).css("opacity", 1);
-
-                $(`.home-page-${i} .blast`).mouseenter(function () {
-                    var el = $(this);
-
-                    $(this).addClass("animated rubberBand");
-                    $(this).one(
-                        "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-                        function () {
-                            el.removeClass("animated rubberBand");
-                        }
-                    );
-                });
-            }, 3000);
+            var el = $(this);
 
             setTimeout(function () {
-                $(`.home-page-${i} .flat-button`).addClass("animated bounceIn");
-                $(`.home-page-${i} .flat-button`).one(
-                    "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-                    function () {
-                        $(`.home-page-${i} .flat-button`).removeClass("animated bounceIn");
-                        $(`.home-page-${i} .flat-button`).css("opacity", 1);
-                    }
-                );
-            }, 2000);
+                el.addClass("animated bounceIn");
+            }, a);
 
-            $(`.home-page-${i} .flat-button`).mouseenter(function () {
+            if (a < 1200) {
+                a = a + 50;
+            } else {
+                a = a + 35;
+            }
+        });
+        setTimeout(function () {
+            $(`.home-page-${i} .blast`).removeClass("animated bounceIn");
+            $(`.home-page-${i} .blast`).css("opacity", 1);
+
+            $(`.home-page-${i} .blast`).mouseenter(function () {
                 var el = $(this);
 
                 $(this).addClass("animated rubberBand");
@@ -79,7 +54,34 @@ const BlastText = ({ text }) => {
                     }
                 );
             });
-        }
+        }, 3000);
+
+        setTimeout(function () {
+            $(`.home-page-${i} .flat-button`).addClass("animated bounceIn");
+            $(`.home-page-${i} .flat-button`).one(
+                "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+                function () {
+                    $(`.home-page-${i} .flat-button`).removeClass("animated bounceIn");
+                    $(`.home-page-${i} .flat-button`).css("opacity", 1);
+                }
+            );
+        }, 2000);
+
+        $(`.home-page-${i} .flat-button`).mouseenter(function () {
+            var el = $(this);
+
+            $(this).addClass("animated rubberBand");
+            $(this).one(
+                "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+                function () {
+                    el.removeClass("animated rubberBand");
+                }
+            );
+        });
+    }
+
+    useEffect(() => {
+        
     }, [])
 
 
