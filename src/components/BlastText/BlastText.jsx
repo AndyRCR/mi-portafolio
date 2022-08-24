@@ -6,17 +6,17 @@ import Blast from 'blast-vanilla'
 const BlastText = ({ text }) => {
 
     useEffect(() => {
-        return () => {
-            new Blast('.blast-root', {
-                returnGenerated: true,
-                delimiter: 'character',
-                search: false,
-                customClass: '',
-                aria: true,
-                debug: false,
-                name: 'blast'
-            })
+        new Blast('.blast-root', {
+            returnGenerated: true,
+            delimiter: 'character',
+            search: false,
+            customClass: '',
+            aria: true,
+            debug: false,
+            name: 'blast'
+        })
 
+        return () => {
             for (let i = 1; i <= 4; i++) {
                 let a = 0;
 
