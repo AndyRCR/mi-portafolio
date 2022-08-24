@@ -56,8 +56,8 @@ const Techs = () => {
                         <p>MySQL</p>
                     </div>
                     <div className="techItem">
-                        <img src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/aws.png" alt="AWS" />
-                        <p>AWS</p>
+                        <img src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/firebase.png" alt="Firebase" />
+                        <p>Firebase</p>
                     </div>
                 </div>
             </div>
@@ -65,6 +65,10 @@ const Techs = () => {
             <div data-aos="fade-left" data-aos-duration="2500" data-aos-delay="1000">
                 <h3>Extra</h3>
                 <div className='extra'>
+                    <div className="techItem">
+                        <img src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/aws.png" alt="AWS" />
+                        <p>AWS</p>
+                    </div>
                     <div className="techItem">
                         <img src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/git.png" alt="Git" />
                         <p>Git</p>
