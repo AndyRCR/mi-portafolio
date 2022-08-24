@@ -27,7 +27,7 @@ const Principal = () => {
               <div className="page">
                 <div className="container home-page-1">
                   <div className="text-zone">
-                    <BlastText text="main" className="blast-root-1" />
+                    <BlastText text="main" className="blast-root" />
                     <h2 data-aos="fade-up" data-aos-duration="2500">Full Stack Developer / Analyst Programmer</h2>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ const Principal = () => {
               <div className="page">
                 <div className="container home-page-2">
                   <div className="text-zone">
-                    <BlastText text="about" className="blast-root-2" />
+                    <BlastText text="about" className="blast-root" />
                     <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">
                       I am a student soon to finish my degree in Systems Engineering, with a great
                       interest in the area of full-stack web development. I love to imagine things
@@ -88,7 +88,7 @@ const Principal = () => {
               <div className="page">
                 <div className="container home-page-3">
                   <div className="text-zone">
-                    <BlastText text="projects" className="blast-root-3" />
+                    <BlastText text="projects" className="blast-root" />
                     <p className='projectsText' data-aos="fade-up" data-aos-duration="2500">
                       Latest developed projects, see more about them
                       <Link to={'/projects'}><span> here.</span></Link>
@@ -108,7 +108,7 @@ const Principal = () => {
               <div className="page">
                 <div className="container home-page-4">
                   <div className="text-zone">
-                    <BlastText text="contact" className="blast-root-4" />
+                    <BlastText text="contact" className="blast-root" />
                     <p className='contactText' data-aos="fade-up" data-aos-duration="2500">
                       I'm interested in both, freelance opportunities and job offers. However,
                       if you have any other requests or questions, feel free to use the form.

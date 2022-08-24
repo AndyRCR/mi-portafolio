@@ -6,17 +6,17 @@ import Blast from 'blast-vanilla'
 const BlastText = ({ text }) => {
 
     useEffect(() => {
+        new Blast('.blast-root', {
+            returnGenerated: true,
+            delimiter: 'character',
+            search: false,
+            customClass: '',
+            aria: true,
+            debug: false,
+            name: 'blast'
+        })
+        
         for (let i = 1; i <= 4; i++) {
-            new Blast(`.blast-root-${i}`, {
-                returnGenerated: true,
-                delimiter: 'character',
-                search: false,
-                customClass: '',
-                aria: true,
-                debug: false,
-                name: 'blast'
-            })
-
             let a = 0;
 
             $(`.home-page-${i} .blast`).each(function () {
@@ -86,37 +86,37 @@ const BlastText = ({ text }) => {
     return (
         <>
             {text === 'main' && (
-                <h1 aria-label={text} className="blast-root-1">
+                <h1 aria-label={text} className="blast-root">
                     Hi! I'm Andy Canales,<br />a web developer
                 </h1>
             )}
 
             {text === 'about' && (
-                <h1 aria-label={text} className="blast-root-1">
+                <h1 aria-label={text} className="blast-root">
                     A little<br />about me...
                 </h1>
             )}
 
             {text === 'moreabout' && (
-                <h1 aria-label={text} className="blast-root-1">
+                <h1 aria-label={text} className="blast-root">
                     A little<br />more about me...
                 </h1>
             )}
 
             {text === 'skills' && (
-                <h1 aria-label={text} className="blast-root-1">
+                <h1 aria-label={text} className="blast-root">
                     Skills and<br />experience
                 </h1>
             )}
 
             {text === 'projects' && (
-                <h1 aria-label={text} className="blast-root-1">
+                <h1 aria-label={text} className="blast-root">
                     Latest projects
                 </h1>
             )}
 
             {text === 'contact' && (
-                <h1 aria-label={text} className="blast-root-1">
+                <h1 aria-label={text} className="blast-root">
                     Contact me!
                 </h1>
             )}
