@@ -16,7 +16,7 @@ const Projects = () => {
       <Switch />
 
       <div className="page">
-        <div className="container home-page">
+        <div className="container home-page-3">
           <div className="text-zone">
             <BlastText text="projects" className="blast-root" />
           </div>

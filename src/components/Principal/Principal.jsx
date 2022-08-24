@@ -25,7 +25,7 @@ const Principal = () => {
           <FullpageSection>
             <div className={`principal ${theme}`}>
               <div className="page">
-                <div className="container home-page">
+                <div className="container home-page-1">
                   <div className="text-zone">
                     <BlastText text="main" className="blast-root" />
                     <h2 data-aos="fade-up" data-aos-duration="2500">Full Stack Developer / Analyst Programmer</h2>
@@ -54,7 +54,7 @@ const Principal = () => {
               <div className='bugFix'></div>
 
               <div className="page">
-                <div className="container home-page">
+                <div className="container home-page-2">
                   <div className="text-zone">
                     <BlastText text="about" className="blast-root" />
                     <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">
@@ -86,7 +86,7 @@ const Principal = () => {
               <div className='bugFix'></div>
 
               <div className="page">
-                <div className="container home-page">
+                <div className="container home-page-3">
                   <div className="text-zone">
                     <BlastText text="projects" className="blast-root" />
                     <p className='projectsText' data-aos="fade-up" data-aos-duration="2500">
@@ -106,7 +106,7 @@ const Principal = () => {
           <FullpageSection>
             <div className={`contact ${theme}`}>
               <div className="page">
-                <div className="container home-page">
+                <div className="container home-page-4">
                   <div className="text-zone">
                     <BlastText text="contact" className="blast-root" />
                     <p className='contactText' data-aos="fade-up" data-aos-duration="2500">

@@ -16,9 +16,9 @@ const About = () => {
     <div className={`about ${theme}`}>
       <Switch/>
       <div className="page">
-        <div className="container home-page">
+        <div className="container home-page-1">
           <div className="text-zone">
-            <BlastText text="about" className="blast-root" />
+            <BlastText text="moreabout" className="blast-root" />
             <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">
               I'm a full-stack developer located in Peru. I'm passionate about
               programming and impressing with amazing, intuitive and efficient

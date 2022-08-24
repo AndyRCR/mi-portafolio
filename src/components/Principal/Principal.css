@@ -48,7 +48,10 @@
   user-select: none;
 }
 
-.home-page h1 span {
+.home-page-1 h1 span,
+.home-page-2 h1 span,
+.home-page-3 h1 span,
+.home-page-4 h1 span {
   font-size: 80px;
   line-height: 90px;
   font-family: "Exo", sans-serif;

@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Exo:700,800");
 
-.home-page .blast {
+.home-page-1 .blast,
+.home-page-2 .blast,
+.home-page-3 .blast,
+.home-page-4 .blast{
   opacity: 0;
   display: inline-block;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
-.home-page .blast:hover {
+.home-page-1 .blast:hover,
+.home-page-2 .blast:hover,
+.home-page-3 .blast:hover,
+.home-page-4 .blast:hover{
   color: #08FDD8;
 }

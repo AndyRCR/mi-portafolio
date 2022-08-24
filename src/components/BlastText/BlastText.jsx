@@ -16,33 +16,59 @@ const BlastText = ({ text }) => {
             name: 'blast'
         })
 
-        let a = 0;
-        $(".home-page .blast").each(function () {
-            if (a === 300) {
-                a = 400;
-            }
+        for (let i = 1; i <= 4; i++) {
+            let a = 0;
 
-            if (a === 1200) {
-                a = 1400;
-            }
+            $(`.home-page-${i} .blast`).each(function () {
+                if (a === 300) {
+                    a = 400;
+                }
 
-            var el = $(this);
+                if (a === 1200) {
+                    a = 1400;
+                }
+
+                var el = $(this);
+
+                setTimeout(function () {
+                    el.addClass("animated bounceIn");
+                }, a);
+
+                if (a < 1200) {
+                    a = a + 50;
+                } else {
+                    a = a + 35;
+                }
+            });
+            setTimeout(function () {
+                $(`.home-page-${i} .blast`).removeClass("animated bounceIn");
+                $(`.home-page-${i} .blast`).css("opacity", 1);
+
+                $(`.home-page-${i} .blast`).mouseenter(function () {
+                    var el = $(this);
+
+                    $(this).addClass("animated rubberBand");
+                    $(this).one(
+                        "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+                        function () {
+                            el.removeClass("animated rubberBand");
+                        }
+                    );
+                });
+            }, 3000);
 
             setTimeout(function () {
-                el.addClass("animated bounceIn");
-            }, a);
+                $(`.home-page-${i} .flat-button`).addClass("animated bounceIn");
+                $(`.home-page-${i} .flat-button`).one(
+                    "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+                    function () {
+                        $(`.home-page-${i} .flat-button`).removeClass("animated bounceIn");
+                        $(`.home-page-${i} .flat-button`).css("opacity", 1);
+                    }
+                );
+            }, 2000);
 
-            if (a < 1200) {
-                a = a + 50;
-            } else {
-                a = a + 35;
-            }
-        });
-        setTimeout(function () {
-            $(".home-page .blast").removeClass("animated bounceIn");
-            $(".home-page .blast").css("opacity", 1);
-
-            $(".home-page .blast").mouseenter(function () {
+            $(`.home-page-${i} .flat-button`).mouseenter(function () {
                 var el = $(this);
 
                 $(this).addClass("animated rubberBand");
@@ -53,30 +79,7 @@ const BlastText = ({ text }) => {
                     }
                 );
             });
-        }, 3000);
-
-        setTimeout(function () {
-            $(".home-page .flat-button").addClass("animated bounceIn");
-            $(".home-page .flat-button").one(
-                "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-                function () {
-                    $(".home-page .flat-button").removeClass("animated bounceIn");
-                    $(".home-page .flat-button").css("opacity", 1);
-                }
-            );
-        }, 2000);
-
-        $(".home-page .flat-button").mouseenter(function () {
-            var el = $(this);
-
-            $(this).addClass("animated rubberBand");
-            $(this).one(
-                "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-                function () {
-                    el.removeClass("animated rubberBand");
-                }
-            );
-        });
+        }
     }, [])
 
 
@@ -84,25 +87,31 @@ const BlastText = ({ text }) => {
         <>
             {text === 'main' && (
                 <h1 aria-label={text} className="blast-root">
-                    Hi! I'm Andy Canales,<br/>a web developer
+                    Hi! I'm Andy Canales,<br />a web developer
                 </h1>
             )}
 
             {text === 'about' && (
                 <h1 aria-label={text} className="blast-root">
-                    A little<br/>about me...
+                    A little<br />about me...
+                </h1>
+            )}
+
+            {text === 'moreabout' && (
+                <h1 aria-label={text} className="blast-root">
+                    A little<br />more about me...
                 </h1>
             )}
 
             {text === 'skills' && (
                 <h1 aria-label={text} className="blast-root">
-                    Skills and<br/>experience
+                    Skills and<br />experience
                 </h1>
             )}
 
             {text === 'projects' && (
                 <h1 aria-label={text} className="blast-root">
-                    Main projects
+                    Latest projects
                 </h1>
             )}
 
@@ -112,7 +121,7 @@ const BlastText = ({ text }) => {
                 </h1>
             )}
         </>
-        
+
     )
 }
 

@@ -20,7 +20,7 @@ const Skills = () => {
             <div className='bugFix'></div>
 
             <div className="page">
-                <div className="container home-page">
+                <div className="container home-page-2">
                     <div className="text-zone">
                         <BlastText text="skills" className="blast-root" />
                         <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">

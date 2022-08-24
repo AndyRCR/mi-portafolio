@@ -16,7 +16,7 @@ const Contact = () => {
             <Switch />
 
             <div className="page">
-                <div className="container home-page">
+                <div className="container home-page-4">
                     <div className="text-zone">
                         <BlastText text="contact" className="blast-root" />
                         <p className='contactText' data-aos="fade-up" data-aos-duration="2500">
