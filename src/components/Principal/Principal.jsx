@@ -64,7 +64,7 @@ const Principal = () => {
                       <br /><br />
                       <Link to={'/about'}><span>Know me better here.</span></Link>
                       <br /><br />
-                      Among my main skills is the MERN stack (MySQL/MongoDB, Express, React and
+                      Among my main skills are the MERN stack (MySQL/MongoDB, Express, React and
                       Node), Three.js, Selenium, etc.
                       <br /><br />
                       <Link to={'/skills'}><span>See my techs stack here.</span></Link>
