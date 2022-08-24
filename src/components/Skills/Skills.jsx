@@ -13,7 +13,7 @@ const Skills = () => {
     }, [theme])
 
     return (
-        <div className={`about ${theme}`}>
+        <div className={`about ${theme}`} style={{overflowX: 'hidden'}}>
             <Switch />
 
             <div className='bugFix'></div>

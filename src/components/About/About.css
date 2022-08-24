@@ -1,8 +1,8 @@
 .about{
     padding: 30px;
+    height: 100vh;
     width: calc(100% - 150px);
     float: right;
-    height: 100vh;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
@@ -30,6 +30,13 @@ background-color: #1e1e1e;
 
 .threeContainer{
     width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+canvas{
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .about .text-zone{
@@ -62,4 +69,57 @@ background-color: #1e1e1e;
 .about .aboutText span,
 .projects .projectsText span{
     color: #08FDD8;
+}
+
+@media (max-width: 1350px){
+    .about .page {
+        flex-direction: column;
+    }
+
+    .about .container {
+        width: 100%;
+    }
+
+    .about .text-zone {
+        text-align: center;
+    }
+
+    .about p, .projects p {
+        text-align: center;
+    }
+
+    .threeContainer {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px){
+    .about p, .projects p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 820px){
+    .rootContainer .about{
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .about{
+      width: 100%;
+      overflow: auto;
+    }
+}
+
+@media (max-width: 500px){
+    .about .page {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .about p, .projects p {
+        font-size: 10px;
+    }
 }

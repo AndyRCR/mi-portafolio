@@ -90,3 +90,67 @@ background-color: #1e1e1e;
     width: 100%;
     min-height: 120px;
 }
+
+.swal2-styled.swal2-confirm {
+    background-color: #000;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: 0 0 0 3px #807d7d;
+}
+
+@media (max-width: 1800px){
+    .contact form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1080px){
+    .contact p {
+        font-size: 14px;
+    }
+
+    .contact input, .contact textarea {
+        margin: 15px 20px;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    .contact .page {
+        width: 80%;
+    }
+}
+
+@media (max-width: 820px){
+    .contact{
+      width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .formLine:nth-child(1){
+        flex-direction: column;
+    }
+
+    .contact input[name="name"], .contact input[name="email"] {
+        width: 100%;
+    }
+
+    .contact input, .contact textarea {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 700px){
+    .contact input, .contact textarea {
+        margin: 5px 0;
+    }
+
+    .contact p {
+        font-size: 12px;
+    }
+
+    .contact input, .contact textarea {
+        font-size: 12px;
+    }
+}

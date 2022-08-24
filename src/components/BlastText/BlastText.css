@@ -16,3 +16,52 @@
 .home-page-4 .blast:hover{
   color: #08FDD8;
 }
+
+@media (max-width: 1080px){
+  .home-page-1 .blast,
+  .home-page-2 .blast,
+  .home-page-3 .blast,
+  .home-page-4 .blast {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 820px){
+  .home-page-1 .blast,
+  .home-page-2 .blast,
+  .home-page-3 .blast,
+  .home-page-4 .blast {
+    font-size: 45px;
+  }
+
+  .page{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px){
+  .home-page-1 .blast,
+  .home-page-2 .blast,
+  .home-page-3 .blast,
+  .home-page-4 .blast {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 450px){
+  .home-page-1 .blast,
+  .home-page-2 .blast,
+  .home-page-3 .blast,
+  .home-page-4 .blast {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 320px){
+  .home-page-1 .blast,
+  .home-page-2 .blast,
+  .home-page-3 .blast,
+  .home-page-4 .blast {
+    font-size: 20px;
+  }
+}

@@ -10,6 +10,7 @@ import Scroll from '../Scroll/Scroll'
 import ThreeSphere from '../ThreeSphere/ThreeSphere'
 import Carousel from '../Carousel/Carousel'
 import './Principal.css'
+import Contact from '../Contact/Contact'
 
 const Principal = () => {
   const { theme } = useContext(GlobalContext)
@@ -61,13 +62,10 @@ const Principal = () => {
                       I am a student soon to finish my degree in Systems Engineering, with a great
                       interest in the area of full-stack web development. I love to imagine things
                       and translate them into code, just ask me "How?" and I'll answer you "Let's start" 😉.
-                      <br /><br />
-                      <Link to={'/about'}><span>Know me better here.</span></Link>
+                      <Link to={'/about'}><span> Know me better here.</span></Link>
                       <br /><br />
                       Among my main skills are the MERN stack (MySQL/MongoDB, Express, React and
-                      Node), Three.js, Selenium, etc.
-                      <br /><br />
-                      <Link to={'/skills'}><span>See my techs stack here.</span></Link>
+                      Node), Three.js, Selenium, etc. <Link to={'/skills'}><span>See my techs stack here.</span></Link>
                     </p>
                   </div>
                 </div>
@@ -82,7 +80,7 @@ const Principal = () => {
           </FullpageSection>
 
           <FullpageSection>
-            <div className={`projects ${theme}`}>
+            <div className={`projects ${theme}`} style={{height: '100vh'}}>
               <div className='bugFix'></div>
 
               <div className="page">
@@ -104,36 +102,7 @@ const Principal = () => {
           </FullpageSection>
 
           <FullpageSection>
-            <div className={`contact ${theme}`}>
-              <div className="page">
-                <div className="container home-page-4">
-                  <div className="text-zone">
-                    <BlastText text="contact" className="blast-root" />
-                    <p className='contactText' data-aos="fade-up" data-aos-duration="2500">
-                      I'm interested in both, freelance opportunities and job offers. However,
-                      if you have any other requests or questions, feel free to use the form.
-                    </p>
-                  </div>
-                </div>
-                <form data-aos="fade-up" data-aos-duration="2500">
-                  <div className='formLine'>
-                    <input type="text" name='name' placeholder='Name' required />
-                    <input type="email" name='email' placeholder='Email' required />
-                  </div>
-                  <div className='formLine'>
-                    <input type="text" name='subject' placeholder='Subject' required />
-                  </div>
-                  <div className='formLine'>
-                    <textarea name="message" placeholder='Message' required></textarea>
-                  </div>
-                  <div className='buttonContainer'>
-                    <button type="submit">
-                      Let's go!
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <Contact/>
           </FullpageSection>
         </FullPageSections>
       </Fullpage>

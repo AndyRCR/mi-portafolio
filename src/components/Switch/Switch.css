@@ -22,10 +22,12 @@
     margin: 0 10px;
     display: flex;
     align-items: center;
+    background-color: #000;
 }
 
 .light .switchContainer{
     border: 2px solid #000;
+    background-color: #fff;
 }
 
 .dark .switchContainer{
@@ -47,4 +49,12 @@
 .light .switchButton{
     margin-left: 50%;
     background-color: #000;
+}
+
+@media (max-width: 600px){
+    .switch {
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
 }

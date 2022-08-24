@@ -2,13 +2,13 @@
     padding: 30px;
     width: calc(100% - 150px);
     float: right;
-    height: 100vh;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    height: 100vh;
 }
 
 .rootContainer .projects{
@@ -88,4 +88,65 @@ video{
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
+}
+
+@media (max-width: 1500px){
+    .projects{
+        height: auto;
+    }
+
+    video{
+        width: 80%;
+    }
+
+    .projectItem p{
+        font-size: 12px;
+    }
+
+    .projectItem a{
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects h1{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1400px){
+    .projectsContainer{
+        margin-top: 40px;
+    }
+
+    .projectsLine{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectItem{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 820px){
+    .projects{
+      width: 100%;
+    }
+}
+
+@media (max-width: 400px){
+    .projectItem p{
+        width: 70%;
+        font-size: 10px;
+    }
+
+    .projectItem{
+        align-items: center;
+    }
+
+    .projectItem > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

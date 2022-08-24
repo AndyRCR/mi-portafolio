@@ -8,19 +8,21 @@ import './Navbar.css'
 
 const Navbar = () => {
 
-  const {theme} = useContext(GlobalContext)
+  const {theme, activeNavbar, setActiveNavbar, emptyFields} = useContext(GlobalContext)
 
   useEffect(() => {
     AOS.init()
-  }, [theme])
+  }, [theme, activeNavbar])
 
   return (
     <div
-    className={`navbar ${theme}`}
+    className={`${!activeNavbar ? 'navbar' : 'navbar activeNavbar'} ${theme}`}
     data-aos="fade-right"
     data-aos-duration="1500">
         <div className='navbarLogo'>
-          <Link to={'/'}>
+          <Link to={'/'} onClick={() =>{
+            setActiveNavbar(false)
+            emptyFields()}}>
             <div className='navbarImage'>
             </div>
           </Link>
@@ -31,16 +33,24 @@ const Navbar = () => {
 
         <div className='navbarMenu'>
           <ul>
-            <NavLink className='navLink' to={'/about'}>
+            <NavLink className='navLink' to={'/about'} onClick={() => {
+              setActiveNavbar(false)
+              emptyFields()}}>
               <li>About me</li>
             </NavLink>
-            <NavLink className='navLink' to={'/skills'}>
+            <NavLink className='navLink' to={'/skills'} onClick={() => {
+              setActiveNavbar(false)
+              emptyFields()}}>
               <li>Skills</li>
             </NavLink>
-            <NavLink className='navLink' to={'/projects'}>
+            <NavLink className='navLink' to={'/projects'} onClick={() => {
+              setActiveNavbar(false)
+              emptyFields()}}>
               <li>Projects</li>
             </NavLink>
-            <NavLink className='navLink' to={'/contact'}>
+            <NavLink className='navLink' to={'/contact'} onClick={() => {
+              setActiveNavbar(false)
+              emptyFields()}}>
               <li>Contact</li>
             </NavLink>
           </ul>

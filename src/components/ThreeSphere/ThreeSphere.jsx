@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useEffect } from 'react'
 import * as THREE from 'three'
 import { GlobalContext } from '../../context/GlobalStateContext'
+import './ThreeSphere.css'
 
 const ThreeSphere = () => {
 

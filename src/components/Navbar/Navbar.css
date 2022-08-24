@@ -27,6 +27,17 @@
     border-right: none;
 }
 
+.navbarLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbarLogo a{
+    width: 150px;
+    height: 150px;
+}
+
 .light .navbarLogo{
     background-color: #fff;
 }
@@ -151,4 +162,42 @@
 
 .dark .navbarSocial a:nth-child(3){
     color: #1E81D8;
+}
+
+@media (max-width: 820px){
+    .navbar{
+        width: 0;
+        overflow: hidden;
+    }
+
+    .navbarLogo{
+        padding-top: 50px;
+    }
+
+    .activeNavbar{
+        width: 100%;
+    }
+
+    .navbarSocial{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 600px){
+    .navbarImage {
+        height: 130px;
+    }
+
+    .navbar li {
+        height: 50px;
+    }
+
+    .navbarIcon {
+        margin: 10px 0;
+    }
+
+    .navbarSocial {
+        font-size: 30px;
+    }
 }

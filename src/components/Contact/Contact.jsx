@@ -3,17 +3,27 @@ import { GlobalContext } from '../../context/GlobalStateContext'
 import Switch from '../Switch/Switch'
 import BlastText from '../BlastText/BlastText'
 import './Contact.css'
+import { useLocation } from 'react-router-dom'
 
 const Contact = () => {
 
-    const { theme } = useContext(GlobalContext)
+    const {pathname} = useLocation()
+    const { theme, mail, setMail, verifyFields } = useContext(GlobalContext)
+
+    const handleChange = (e) =>{
+        const { name, value } = e.target
+        setMail({
+            ...mail,
+            [name]: value
+        })
+    }
 
     useEffect(() => {
     }, [theme])
 
     return (
         <div className={`contact ${theme}`}>
-            <Switch />
+            {pathname === '/contact' && <Switch />}
 
             <div className="page">
                 <div className="container home-page-4">
@@ -27,19 +37,19 @@ const Contact = () => {
                 </div>
                 <form data-aos="fade-up" data-aos-duration="2500">
                     <div className='formLine'>
-                        <input type="text" name='name' placeholder='Name' required />
-                        <input type="email" name='email' placeholder='Email' required />
+                        <input value={mail.name} onChange={handleChange} type="text" name='name' placeholder='Name' required />
+                        <input value={mail.email} onChange={handleChange} type="email" name='email' placeholder='Email' required />
                     </div>
                     <div className='formLine'>
-                        <input type="text" name='subject' placeholder='Subject' required />
+                        <input value={mail.subject} onChange={handleChange} type="text" name='subject' placeholder='Subject' required />
                     </div>
                     <div className='formLine'>
-                        <textarea name="message" placeholder='Message' required></textarea>
+                        <textarea value={mail.message} onChange={handleChange} name="message" placeholder='Message' required></textarea>
                     </div>
                     <div className='buttonContainer'>
-                        <button type="submit">
+                        <div className='button' onClick={() => verifyFields()}>
                             Let's go!
-                        </button>
+                        </div>
                     </div>
                 </form>
             </div>
