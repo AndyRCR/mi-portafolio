@@ -4,7 +4,6 @@ import { GlobalContext } from '../../context/GlobalStateContext'
 import './Skills.css'
 import BlastText from '../BlastText/BlastText'
 import Switch from '../Switch/Switch'
-import Scroll from '../Scroll/Scroll'
 import Techs from '../Techs/Techs'
 
 const Skills = () => {
@@ -43,8 +42,6 @@ const Skills = () => {
                     <Techs />
                 </div>
             </div>
-
-            <Scroll />
         </div>
     )
 }
