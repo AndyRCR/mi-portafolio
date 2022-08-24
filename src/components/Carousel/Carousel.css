@@ -70,6 +70,14 @@
     align-items: center;
 }
 
+.light .slick-slide img {
+  box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+}
+
+.dark .slick-slide img {
+  box-shadow: none;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     font-size: 7vw;

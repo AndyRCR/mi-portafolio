@@ -31,7 +31,7 @@ const Principal = () => {
                     <h2 data-aos="fade-up" data-aos-duration="2500">Full Stack Developer / Analyst Programmer</h2>
                   </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="2500" className='initialArrowContainer'>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="2000" className='initialArrowContainer'>
                   <FontAwesomeIcon className='initialIcon' icon={faArrowDown}/>
                   <p>Let's start! Scroll down</p>
                   <FontAwesomeIcon className='initialIcon' icon={faArrowDown}/>
