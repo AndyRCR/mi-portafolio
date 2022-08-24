@@ -92,11 +92,11 @@ background-color: #1e1e1e;
 }
 
 .swal2-styled.swal2-confirm {
-    background-color: #000;
+    background-color: #000 !important;
 }
 
 .swal2-styled.swal2-confirm:focus {
-    box-shadow: 0 0 0 3px #807d7d;
+    box-shadow: 0 0 0 3px #807d7d !important;
 }
 
 @media (max-width: 1800px){
