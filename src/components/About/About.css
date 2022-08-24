@@ -6,6 +6,11 @@
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.rootContainer .about{
     justify-content: space-between;
 }
 
@@ -37,7 +42,7 @@ background-color: #1e1e1e;
     align-items: center;
 }
 
-.about p{
+.about p, .projects p{
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -54,6 +59,7 @@ background-color: #1e1e1e;
   color: #fff;
 }
 
-.about .aboutText span{
+.about .aboutText span,
+.projects .projectsText span{
     color: #08FDD8;
 }

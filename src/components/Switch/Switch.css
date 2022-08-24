@@ -1,6 +1,6 @@
 .switch{
     display: flex;
-    position: absolute;
+    position: fixed;
     right: 30px;
     top: 30px;
     z-index: 50;

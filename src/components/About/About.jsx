@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../context/GlobalStateContext'
-import Scroll from '../Scroll/Scroll'
 import Switch from '../Switch/Switch'
 import BlastText from '../BlastText/BlastText'
 import './About.css'
@@ -16,9 +15,6 @@ const About = () => {
   return (
     <div className={`about ${theme}`}>
       <Switch/>
-
-      <div className='bugFix'></div>
-
       <div className="page">
         <div className="container home-page">
           <div className="text-zone">
@@ -47,8 +43,6 @@ const About = () => {
           <ThreeSphere/>
         </div>
       </div>
-
-      <Scroll/>
     </div>
   )
 }

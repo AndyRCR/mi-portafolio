@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../../context/GlobalStateContext'
-import Scroll from '../Scroll/Scroll'
 import Switch from '../Switch/Switch'
 import BlastText from '../BlastText/BlastText'
 import './Projects.css'
@@ -120,8 +119,6 @@ const Projects = () => {
           </div>
         </div>
       </div>
-
-      <Scroll />
     </div>
   )
 }
