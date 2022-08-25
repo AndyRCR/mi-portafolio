@@ -87,7 +87,7 @@ const BlastText = ({ text }) => {
         <>
             {text === 'main' && (
                 <h1 aria-label={text} className="blast-root">
-                    Hi! I'm Andy Canales,<br />a web developer
+                    Hi! I'm Andy Canales,<br /> web developer
                 </h1>
             )}
 

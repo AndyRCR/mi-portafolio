@@ -29,7 +29,7 @@ const About = () => {
               produce music, and my dream is to be able to live programming in
               conjunction with these activities.
               <br/><br/>
-              I am more involved in frontend development but in the same way I
+              I'm more involved in frontend development but in the same way I
               can deal with and adapt to any technology related to the web.
               <br/><br/>
               Just ask me "How?" and I'll answer you "Let's start"

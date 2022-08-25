@@ -59,7 +59,7 @@ const Principal = () => {
                   <div className="text-zone">
                     <BlastText text="about" className="blast-root" />
                     <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">
-                      I am a student soon to finish my degree in Systems Engineering, with a great
+                      I'm a student soon to finish my degree in Systems Engineering, with a great
                       interest in the area of full-stack web development. I love to imagine things
                       and translate them into code, just ask me "How?" and I'll answer you "Let's start" 😉.
                       <Link to={'/about'}><span> Know me better here.</span></Link>

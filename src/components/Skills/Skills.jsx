@@ -30,7 +30,7 @@ const Skills = () => {
                             development team and as a programmer analyst for a technology
                             innovation company.
                             <br /><br />
-                            I am able to create web pages that are fast, efficient and intuitive,
+                            I'm able to create web pages that are fast, efficient and intuitive,
                             adaptable to any device.
                             <br /><br />
                             Visit mi <a href='https://www.linkedin.com/in/andycanalesr/' target='_blank' rel="noreferrer"><span>LinkedIn</span></a> profile for more details or just <Link to={'/contact'}><span>contact me.</span></Link>
