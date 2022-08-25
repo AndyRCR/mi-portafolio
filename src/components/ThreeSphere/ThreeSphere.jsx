@@ -13,20 +13,20 @@ const ThreeSphere = () => {
         const canvas = document.querySelector("canvas.webgl");
         const medida = document.querySelector(".threeContainer");
         const tecnologias = [
-          "Javascript",
+          "JavaScript",
           "SASS",
           "React",
-          "Vue.js",
+          "HTML",
           "Blender",
           "Node.js",
           "Express.js",
           "Git",
           "Firebase",
-          "AWS RDS & S3",
+          "AWS",
           "Three.js",
           "MongoDB",
-          "SQL",
-          "Angular"
+          "MySQL",
+          "Java"
         ];
     
         const scene = new THREE.Scene();
