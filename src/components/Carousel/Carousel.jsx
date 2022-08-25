@@ -5,11 +5,11 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Carousel.css'
 
 const projects = [
-  {name: "La Tienda Pe '", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/banners/tiendapebanner.jpg'},
-  {name: "Weather Admin Panel", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/banners/weatherbanner.jpg'},
-  {name: "Foxbel Music Player", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/banners/foxbelbanner.jpg'},
-  {name: "Peko Cinema", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/banners/pekobanner.jpg'},
-  {name: "Untels Landing Page", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/banners/untelsbanner.png'}
+  {name: "La Tienda Pe '", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/tiendape.jpg'},
+  {name: "Weather Admin Panel", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/weather.jpg'},
+  {name: "Foxbel Music Player", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/foxbel.jpg'},
+  {name: "Peko Cinema", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/peko.jpg'},
+  {name: "Untels Landing Page", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/untels.png'}
 ]
 
 function SampleNextArrow({ onClick }) {

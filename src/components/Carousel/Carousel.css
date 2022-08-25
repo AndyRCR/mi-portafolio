@@ -23,6 +23,10 @@
   max-height: 330px;
   border-radius: 20px;
 }
+
+.slide img:focus,
+.slide:focus{ outline: none; }
+
 .slide {
   /* opacity: .5; */
   transform: scale(0.7);
