@@ -9,7 +9,7 @@ const GlobalStateContext = ({children}) => {
 
   emailjs.init("uf1ocX0CxNZspgi0V")
 
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
     const [activeNavbar, setActiveNavbar] = useState(false)
     const [mail, setMail] = useState({
       name: '',
