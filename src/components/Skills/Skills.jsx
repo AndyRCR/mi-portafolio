@@ -22,7 +22,7 @@ const Skills = () => {
                 <div className="container home-page-2">
                     <div className="text-zone">
                         <BlastText text="skills" className="blast-root" />
-                        <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">
+                        <p className='aboutText'>
                             Since I started in the world of web programming 4 years ago I find
                             myself refining my skills.
                             <br /><br />

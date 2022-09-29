@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 50;
+    z-index: 70;
 }
 
 .navbar.light{
@@ -47,10 +47,11 @@
 }
 
 .navbarImage{
-    width: 100%;
+    width: 150px;
     height: 150px;
     transition: var(--transition);
     background-size: cover;
+    cursor: pointer;
 }
 
 .light .navbarImage{
@@ -175,7 +176,7 @@
     }
 
     .activeNavbar{
-        width: 100%;
+        width: 100vw;
     }
 
     .navbarSocial{

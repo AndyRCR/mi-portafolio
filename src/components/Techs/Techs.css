@@ -115,6 +115,7 @@
 
     .frontend, .backend, .extra{
         height: auto;
+        border: none !important;
     }
 
     .light .frontend, .light .backend, .light .extra {

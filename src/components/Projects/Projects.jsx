@@ -24,7 +24,7 @@ const Projects = () => {
 
         <div className='projectsContainer'>
           <div className='projectsLine'>
-            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500">
+            <div className="projectItem">
               <h3>La Tienda Pe'</h3>
               <div>
                 <a href="https://la-tienda-pe-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
@@ -42,7 +42,7 @@ const Projects = () => {
               </p>
             </div>
 
-            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="600">
+            <div className="projectItem">
               <h3>Foxbel Music Player</h3>
               <div>
                 <a href="https://foxbel-music-player-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
@@ -59,7 +59,7 @@ const Projects = () => {
               </p>
             </div>
 
-            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500">
+            <div className="projectItem">
               <h3>Weather Admin Panel</h3>
               <div>
                 <a href="https://weather-app-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
@@ -80,7 +80,7 @@ const Projects = () => {
           </div>
 
           <div className='projectsLine'>
-            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="1000">
+            <div className="projectItem">
               <h3>Peko Cinema</h3>
               <div>
                 <a href="https://peko-cinema-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
@@ -98,7 +98,7 @@ const Projects = () => {
               </p>
             </div>
 
-            <div className="projectItem" data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="1000">
+            <div className="projectItem">
               <h3>Untels Landing Page</h3>
               <div>
                 <a href="https://untels-lp-andyrcr.vercel.app/" target='_blank' rel="noreferrer">

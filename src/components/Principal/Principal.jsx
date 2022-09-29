@@ -29,10 +29,10 @@ const Principal = () => {
                 <div className="container home-page-1">
                   <div className="text-zone">
                     <BlastText text="main" className="blast-root" />
-                    <h2 data-aos="fade-up" data-aos-duration="2500">Full Stack Developer / Analyst Programmer</h2>
+                    <h2 data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="1000">Full Stack Developer / Analyst Programmer</h2>
                   </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="2000" className='initialArrowContainer'>
+                <div data-aos="fade-up" data-aos-duration="2500" data-aos-delay="1000" className='initialArrowContainer'>
                   <FontAwesomeIcon className='initialIcon' icon={faArrowDown}/>
                   <p>Let's start! Scroll down</p>
                   <FontAwesomeIcon className='initialIcon' icon={faArrowDown}/>
@@ -58,7 +58,7 @@ const Principal = () => {
                 <div className="container home-page-2">
                   <div className="text-zone">
                     <BlastText text="about" className="blast-root" />
-                    <p className='aboutText' data-aos="fade-up" data-aos-duration="2500">
+                    <p className='aboutText'>
                       I'm a student soon to finish my degree in Systems Engineering, with a great
                       interest in the area of full-stack web development. I love to imagine things
                       and translate them into code, just ask me "How?" and I'll answer you "Let's start" 😉.
@@ -87,7 +87,7 @@ const Principal = () => {
                 <div className="container home-page-3">
                   <div className="text-zone">
                     <BlastText text="projects" className="blast-root" />
-                    <p className='projectsText' data-aos="fade-up" data-aos-duration="2500">
+                    <p className='projectsText'>
                       Latest developed projects, see more about them
                       <Link to={'/projects'}><span> here.</span></Link>
                     </p>

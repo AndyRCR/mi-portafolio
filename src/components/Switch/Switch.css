@@ -3,7 +3,7 @@
     position: fixed;
     right: 30px;
     top: 30px;
-    z-index: 50;
+    z-index: 30;
 }
 
 .switch.light{

@@ -4,11 +4,12 @@ import Switch from '../Switch/Switch'
 import BlastText from '../BlastText/BlastText'
 import './Contact.css'
 import { useLocation } from 'react-router-dom'
+import { BeatLoader } from 'react-spinners'
 
 const Contact = () => {
 
     const {pathname} = useLocation()
-    const { theme, mail, setMail, verifyFields } = useContext(GlobalContext)
+    const { theme, mail, setMail, verifyFields, isLoading } = useContext(GlobalContext)
 
     const handleChange = (e) =>{
         const { name, value } = e.target
@@ -29,13 +30,13 @@ const Contact = () => {
                 <div className="container home-page-4">
                     <div className="text-zone">
                         <BlastText text="contact" className="blast-root" />
-                        <p className='contactText' data-aos="fade-up" data-aos-duration="2500">
+                        <p className='contactText'>
                             I'm interested in both, freelance opportunities and job offers. However,
                             if you have any other requests or questions, feel free to use the form.
                         </p>
                     </div>
                 </div>
-                <form data-aos="fade-up" data-aos-duration="2500">
+                <form>
                     <div className='formLine'>
                         <input value={mail.name} onChange={handleChange} type="text" name='name' placeholder='Name' required />
                         <input value={mail.email} onChange={handleChange} type="email" name='email' placeholder='Email' required />
@@ -47,8 +48,12 @@ const Contact = () => {
                         <textarea value={mail.message} onChange={handleChange} name="message" placeholder='Message' required></textarea>
                     </div>
                     <div className='buttonContainer'>
-                        <div className='button' onClick={() => verifyFields()}>
-                            Let's go!
+                        <div className='button' onClick={() => {
+                            if(!isLoading) verifyFields()
+                        }}>
+                            {isLoading ? (
+                                <BeatLoader color='#fff' />
+                            ):<>Let's go!</>}
                         </div>
                     </div>
                 </form>

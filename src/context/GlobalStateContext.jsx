@@ -9,6 +9,9 @@ const GlobalStateContext = ({children}) => {
 
   emailjs.init("uf1ocX0CxNZspgi0V")
 
+    const [isLoading, setIsLoading] = useState(false)
+    const [loaderState, setLoaderState] = useState(1)
+    const [change, setChange] = useState(true)
     const [theme, setTheme] = useState(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
     const [activeNavbar, setActiveNavbar] = useState(false)
     const [mail, setMail] = useState({
@@ -19,6 +22,7 @@ const GlobalStateContext = ({children}) => {
     })
 
     const verifyFields = () =>{
+      setIsLoading(true)
       if(mail.name !== '' && mail.email !== '' && mail.subject !== '' && mail.subject !== ''){
         emailjs.send('service_4gfz4ub', 'template_lkdxwqs', {...mail})
           .then(function (response) {
@@ -40,13 +44,14 @@ const GlobalStateContext = ({children}) => {
                   `Please try again`,
                   'error'
               )
-          })
+          }).then(() => setIsLoading(false))
       }else{
         Swal.fire(
           'Information',
           'All fields are required',
           'info'
         )
+        setIsLoading(false)
       }
     }
 
@@ -62,7 +67,10 @@ const GlobalStateContext = ({children}) => {
     value = {{
         theme, setTheme,
         activeNavbar, setActiveNavbar,
-        mail, setMail, verifyFields, emptyFields
+        mail, setMail, verifyFields, emptyFields,
+        loaderState, setLoaderState,
+        change, setChange,
+        isLoading, setIsLoading
     }}>
         {children}
     </GlobalContext.Provider>

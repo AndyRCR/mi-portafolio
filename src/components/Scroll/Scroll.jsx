@@ -13,7 +13,7 @@ const Scroll = () => {
   
 
   return (
-    <div data-aos="fade-up" data-aos-duration="2000" className={`scroll ${theme}`}>
+    <div className={`scroll ${theme}`}>
       <div className='scrollItem'>
         <div className='scrollText'>
           Scroll down

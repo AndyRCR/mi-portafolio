@@ -10,7 +10,7 @@ const Techs = () => {
 
     return (
         <div className={`techs ${theme}`}>
-            <div data-aos="fade-left" data-aos-duration="2500">
+            <div>
                 <h3>Frontend</h3>
                 <div className='frontend'>
                     <div className='techItem'>
@@ -36,7 +36,7 @@ const Techs = () => {
                 </div>
             </div>
 
-            <div data-aos="fade-left" data-aos-duration="2500" data-aos-delay="500">
+            <div>
                 <h3>Backend</h3>
                 <div className='backend'>
                     <div className="techItem">
@@ -62,7 +62,7 @@ const Techs = () => {
                 </div>
             </div>
 
-            <div data-aos="fade-left" data-aos-duration="2500" data-aos-delay="1000">
+            <div>
                 <h3>Extra</h3>
                 <div className='extra'>
                     <div className="techItem">

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { GlobalContext } from '../../context/GlobalStateContext'
@@ -8,7 +8,9 @@ import './Navbar.css'
 
 const Navbar = () => {
 
-  const {theme, activeNavbar, setActiveNavbar, emptyFields} = useContext(GlobalContext)
+  const { theme, activeNavbar, setActiveNavbar, emptyFields, setLoaderState, setChange, change } = useContext(GlobalContext)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     AOS.init()
@@ -16,57 +18,77 @@ const Navbar = () => {
 
   return (
     <div
-    className={`${!activeNavbar ? 'navbar' : 'navbar activeNavbar'} ${theme}`}
-    data-aos="fade-right"
-    data-aos-duration="1500">
-        <div className='navbarLogo'>
-          <Link to={'/'} onClick={() =>{
+      className={`${!activeNavbar ? 'navbar' : 'navbar activeNavbar'} ${theme}`}
+      data-aos="fade-right"
+      data-aos-delay="1500">
+      <div className='navbarLogo'>
+        <div
+        className='navbarImage'
+        onClick={() => {
+          setChange(!change)
+          setLoaderState(0)
+          setTimeout(()=>navigate('/'), 500)
+          setActiveNavbar(false)
+          emptyFields()
+        }}>
+        </div>
+        <div className='navbarTitle'>
+          Web Developer
+        </div>
+      </div>
+
+      <div className='navbarMenu'>
+        <ul>
+          <li onClick={() => {
+            setChange(!change)
+            setLoaderState(0)
+            setTimeout(()=>navigate('/about'), 500)
             setActiveNavbar(false)
-            emptyFields()}}>
-            <div className='navbarImage'>
-            </div>
-          </Link>
-          <div className='navbarTitle'>
-            Web Developer
-          </div>
-        </div>
+            emptyFields()
+          }}>
+            About me
+          </li>
+          <li onClick={() => {
+            setChange(!change)
+            setLoaderState(0)
+            setTimeout(()=>navigate('/skills'), 500)
+            setActiveNavbar(false)
+            emptyFields()
+          }}>
+            Skills
+          </li>
+          <li onClick={() => {
+            setChange(!change)
+            setLoaderState(0)
+            setTimeout(()=>navigate('/projects'), 500)
+            setActiveNavbar(false)
+            emptyFields()
+          }}>
+            Projects
+          </li>
+          <li onClick={() => {
+            setChange(!change)
+            setLoaderState(0)
+            setTimeout(()=>navigate('/contact'), 500)
+            setActiveNavbar(false)
+            emptyFields()
+          }}>
+            Contact
+          </li>
+        </ul>
+      </div>
 
-        <div className='navbarMenu'>
-          <ul>
-            <NavLink className='navLink' to={'/about'} onClick={() => {
-              setActiveNavbar(false)
-              emptyFields()}}>
-              <li>About me</li>
-            </NavLink>
-            <NavLink className='navLink' to={'/skills'} onClick={() => {
-              setActiveNavbar(false)
-              emptyFields()}}>
-              <li>Skills</li>
-            </NavLink>
-            <NavLink className='navLink' to={'/projects'} onClick={() => {
-              setActiveNavbar(false)
-              emptyFields()}}>
-              <li>Projects</li>
-            </NavLink>
-            <NavLink className='navLink' to={'/contact'} onClick={() => {
-              setActiveNavbar(false)
-              emptyFields()}}>
-              <li>Contact</li>
-            </NavLink>
-          </ul>
-        </div>
-
-        <div className='navbarSocial'>
-          <a href='https://www.linkedin.com/in/andycanalesr/' target='_blank' rel="noreferrer">
-            <FontAwesomeIcon className='navbarIcon' icon={faLinkedin} />
-          </a>
-          <a href="https://github.com/AndyRCR" target='_blank' rel="noreferrer">
-            <FontAwesomeIcon className='navbarIcon' icon={faGithub} />
-          </a>
-          <a href="https://twitter.com/RubenCanalesR" target='_blank' rel="noreferrer">
-            <FontAwesomeIcon className='navbarIcon' icon={faTwitter} />
-          </a>
-        </div>
+      <div className='navbarSocial'>
+        <a href='https://www.linkedin.com/in/andycanalesr/' target='_blank' rel="noreferrer">
+          <FontAwesomeIcon className='navbarIcon' icon={faLinkedin} />
+        </a>
+        <a href="https://github.com/AndyRCR" target='_blank' rel="noreferrer">
+          <FontAwesomeIcon className='navbarIcon' icon={faGithub} />
+        </a>
+        <a href="https://twitter.com/RubenCanalesR" target='_blank' rel="noreferrer">
+          <FontAwesomeIcon className='navbarIcon' icon={faTwitter} />
+        </a>
+      </div>
     </div>
   )
 }
