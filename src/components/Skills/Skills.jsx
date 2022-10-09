@@ -1,19 +1,29 @@
 import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../context/GlobalStateContext'
-import './Skills.css'
 import BlastText from '../BlastText/BlastText'
 import Switch from '../Switch/Switch'
 import Techs from '../Techs/Techs'
+import './Skills.css'
 
 const Skills = () => {
-    const { theme } = useContext(GlobalContext)
+    const { theme, setChange, setLoaderState, setActiveNavbar, emptyFields, change } = useContext(GlobalContext)
+
+    const navigate = useNavigate()
+
+    const to = (path) => {
+        setChange(!change)
+        setLoaderState(0)
+        setTimeout(() => navigate(`/${path}`), 500)
+        setActiveNavbar(false)
+        emptyFields()
+    }
 
     useEffect(() => {
     }, [theme])
 
     return (
-        <div className={`about ${theme}`} style={{overflowX: 'hidden'}}>
+        <div className={`about ${theme}`} style={{ overflowX: 'hidden' }}>
             <Switch />
 
             <div className='bugFix'></div>
@@ -35,7 +45,7 @@ const Skills = () => {
                             I'm able to create web pages that are fast, efficient and intuitive,
                             adaptable to any device.
                             <br /><br />
-                            Visit mi <a href='https://www.linkedin.com/in/andycanalesr/' target='_blank' rel="noreferrer"><span>LinkedIn</span></a> profile for more details or just <Link to={'/contact'}><span>contact me.</span></Link>
+                            Visit mi <a href='https://www.linkedin.com/in/andycanalesr/' target='_blank' rel="noreferrer"><span>LinkedIn</span></a> profile for more details or just <span onClick={() => to('contact')}>contact me</span>
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../context/GlobalStateContext'
 import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,7 +13,17 @@ import './Principal.css'
 import Contact from '../Contact/Contact'
 
 const Principal = () => {
-  const { theme } = useContext(GlobalContext)
+  const { theme, setChange, change, setLoaderState, setActiveNavbar, emptyFields } = useContext(GlobalContext)
+
+  const navigate = useNavigate()
+
+  const to = (path) =>{
+    setChange(!change)
+    setLoaderState(0)
+    setTimeout(()=>navigate(`/${path}`), 500)
+    setActiveNavbar(false)
+    emptyFields()
+  }
 
   useEffect(() => {
   }, [theme])
@@ -61,11 +71,10 @@ const Principal = () => {
                     <p className='aboutText'>
                       I'm a student soon to finish my degree in Systems Engineering, with a great
                       interest in the area of full-stack web development. I love to imagine things
-                      and translate them into code, just ask me "How?" and I'll answer you "Let's start" 😉.
-                      <Link to={'/about'}><span> Know me better here.</span></Link>
+                      and translate them into code, just ask me "How?" and I'll answer you "Let's start" 😉. <span onClick={() => to('about')}>Know me better here.</span>
                       <br /><br />
                       Among my main skills are the MERN stack (MySQL/MongoDB, Express, React and
-                      Node), Three.js, Selenium, etc. <Link to={'/skills'}><span>See my techs stack here.</span></Link>
+                      Node), Three.js, Selenium, etc. <span onClick={() => to('skills')}>See my techs stack here.</span>
                     </p>
                   </div>
                 </div>
@@ -89,7 +98,7 @@ const Principal = () => {
                     <BlastText text="projects" className="blast-root" />
                     <p className='projectsText'>
                       Latest developed projects, see more about them
-                      <Link to={'/projects'}><span> here.</span></Link>
+                      <span onClick={() => to('projects')}> here.</span>
                     </p>
                   </div>
                 </div>

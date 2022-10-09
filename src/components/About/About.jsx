@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../context/GlobalStateContext'
 import Switch from '../Switch/Switch'
 import BlastText from '../BlastText/BlastText'
@@ -7,7 +7,17 @@ import './About.css'
 import ThreeSphere from '../ThreeSphere/ThreeSphere'
 
 const About = () => {
-  const { theme } = useContext(GlobalContext)
+  const { theme, setChange, setLoaderState, setActiveNavbar, emptyFields, change } = useContext(GlobalContext)
+
+  const navigate = useNavigate()
+
+  const to = (path) =>{
+    setChange(!change)
+    setLoaderState(0)
+    setTimeout(()=>navigate(`/${path}`), 500)
+    setActiveNavbar(false)
+    emptyFields()
+  }
 
   useEffect(() => {
   }, [theme])
@@ -34,7 +44,7 @@ const About = () => {
               <br/><br/>
               Just ask me "How?" and I'll answer you "Let's start"
               <br/><br/>
-              <Link to={'/contact'}><span>Let's start!</span></Link>
+              <span onClick={() => to('contact')}>Let's start!</span>
             </p>
           </div>
         </div>

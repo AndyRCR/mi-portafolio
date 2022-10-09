@@ -45,7 +45,7 @@
 .loader.second{
     width: 0;
     transform: translateX(200vw);
-    transition: .5s;
+    transition: 1s;
 }
 
 .loaderImage{
