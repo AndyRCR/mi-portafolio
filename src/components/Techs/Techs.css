@@ -5,6 +5,11 @@
     text-align: center;
 }
 
+.techsContainer{
+    width: 50%;
+    padding: 0 30px;
+}
+
 .techs h3{
     margin: 20px 0 10px;
 }

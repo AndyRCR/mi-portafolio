@@ -42,6 +42,8 @@ const Skills = () => {
                             being part and cause of the fulfillment of the goals of each month
                             of the company.
                             <br /><br />
+                            I also had the opportunity to work in an Argentine prepaid company where I worked as a front-end developer.
+                            <br /><br />
                             I'm able to create web pages that are fast, efficient and intuitive,
                             adaptable to any device.
                             <br /><br />
