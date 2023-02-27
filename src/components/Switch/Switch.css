@@ -4,6 +4,7 @@
     right: 30px;
     top: 30px;
     z-index: 30;
+    cursor: pointer;
 }
 
 .switch.light{

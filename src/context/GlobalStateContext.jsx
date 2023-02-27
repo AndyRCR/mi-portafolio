@@ -7,7 +7,7 @@ export const GlobalContext = createContext()
 
 const GlobalStateContext = ({children}) => {
 
-  emailjs.init("uf1ocX0CxNZspgi0V")
+  emailjs.init("adA-jRKohY9c3pLXE")
 
     const [isLoading, setIsLoading] = useState(false)
     const [loaderState, setLoaderState] = useState(1)
@@ -24,7 +24,7 @@ const GlobalStateContext = ({children}) => {
     const verifyFields = () =>{
       setIsLoading(true)
       if(mail.name !== '' && mail.email !== '' && mail.subject !== '' && mail.subject !== ''){
-        emailjs.send('service_4gfz4ub', 'template_lkdxwqs', {...mail})
+        emailjs.send('service_62hcb8h', 'template_nec1jlb', mail)
           .then(function (response) {
               Swal.fire(
                   'Nice!',
