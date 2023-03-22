@@ -169,7 +169,7 @@
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-bottom: none;
-  background-image: url("https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/backgroundprofile.jpg");
+  background-image: url(../../assets/icons/backgroundprofile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
