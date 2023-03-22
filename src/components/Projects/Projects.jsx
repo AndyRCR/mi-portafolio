@@ -4,6 +4,16 @@ import Switch from '../Switch/Switch'
 import BlastText from '../BlastText/BlastText'
 import './Projects.css'
 
+/**
+ * Videos
+ */
+
+import tiendape from '../../assets/tiendape_reduced.mp4'
+import foxbel from '../../assets/foxbel_reduced.mp4'
+import weatherapp from '../../assets/weatherapp_reduced.mp4'
+import peko from '../../assets/peko_reduced.mp4'
+import untels from '../../assets/untels_reduced.mp4'
+
 const Projects = () => {
 
   const { theme } = useContext(GlobalContext)
@@ -28,7 +38,7 @@ const Projects = () => {
               <h3>La Tienda Pe'</h3>
               <div>
                 <a href="https://la-tienda-pe-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/tiendape_reduced.mp4" autoPlay loop muted />
+                  <video src={tiendape} autoPlay loop muted />
                 </a>
                 <p>
                   First project in React, developed for the
@@ -46,7 +56,7 @@ const Projects = () => {
               <h3>Foxbel Music Player</h3>
               <div>
                 <a href="https://foxbel-music-player-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/foxbel_reduced.mp4" autoPlay loop muted />
+                  <video src={foxbel} autoPlay loop muted />
                 </a>
                 <p>
                   Music player with responsive design,
@@ -63,7 +73,7 @@ const Projects = () => {
               <h3>Weather Admin Panel</h3>
               <div>
                 <a href="https://weather-app-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/weatherapp_reduced.mp4" autoPlay loop muted />
+                  <video src={weatherapp} autoPlay loop muted />
                 </a>
                 <p>
                   Application that simulates an
@@ -84,7 +94,7 @@ const Projects = () => {
               <h3>Peko Cinema</h3>
               <div>
                 <a href="https://peko-cinema-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/peko_reduced.mp4" autoPlay loop muted />
+                  <video src={peko} autoPlay loop muted />
                 </a>
                 <p>
                   Web app that simulates the flow of
@@ -102,7 +112,7 @@ const Projects = () => {
               <h3>Untels Landing Page</h3>
               <div>
                 <a href="https://untels-lp-andyrcr.vercel.app/" target='_blank' rel="noreferrer">
-                  <video src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/untels_reduced.mp4" autoPlay loop muted />
+                  <video src={untels} autoPlay loop muted />
                 </a>
                 <p>
                   Immersive Landing Page of my university

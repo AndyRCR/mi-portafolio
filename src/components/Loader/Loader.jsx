@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../../context/GlobalStateContext'
+import logoBlackRecortado from '../../assets/icons/logoBlackRecortado.png'
+import logoWhiteRecortado from '../../assets/icons/logoWhiteRecortado.png'
 import './Loader.css'
 
 const Loader = () => {
@@ -20,7 +22,9 @@ const Loader = () => {
         ? 'first'
         : 'second'
     }`}>
-        <div className="loaderImage"></div>
+        <div className='loaderImage'>
+            <img src={theme === 'dark' ? logoWhiteRecortado : logoBlackRecortado} alt="andy canales spinner" />
+        </div>
         <div className="progress-bar">
             <span className="bar">
             <span className="progress"></span>

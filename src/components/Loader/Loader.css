@@ -55,6 +55,12 @@
     transition: var(--transition);
 }
 
+.loaderImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .loader.second .loaderImage{
     width: 0;
 }
@@ -63,13 +69,13 @@
     animation: loaderAnimation 1800ms ease 0s infinite normal;
 }
 
-.light .loaderImage{
+/* .light .loaderImage{
     background-image: url('https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/logoBlackRecortado.png');
 }
 
 .dark .loaderImage{
     background-image: url('https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/logoWhiteRecortado.png');
-}
+} */
 
 .progress-bar {
     border-radius: 60px;

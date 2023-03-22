@@ -72,6 +72,12 @@ canvas{
     cursor: pointer;
 }
 
+@media (max-height: 750px){
+    .about {
+        height: auto;
+    }
+}
+
 @media (max-width: 1350px){
     .about .page {
         flex-direction: column;

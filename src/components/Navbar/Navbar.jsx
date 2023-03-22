@@ -3,7 +3,9 @@ import {useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { GlobalContext } from '../../context/GlobalStateContext'
-import AOS from 'aos';
+import AOS from 'aos'
+import logoBlack from '../../assets/icons/logoBlack.png'
+import logoWhite from '../../assets/icons/logoWhite.png'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -31,6 +33,7 @@ const Navbar = () => {
           setActiveNavbar(false)
           emptyFields()
         }}>
+          <img src={theme === 'dark' ? logoWhite : logoBlack} alt="andy canales developer logo" />
         </div>
         <div className='navbarTitle'>
           Web Developer

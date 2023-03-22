@@ -4,12 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Carousel.css'
 
+/**
+ * Assets
+ */
+
+import tiendape from '../../assets/projects/tiendape.jpg'
+import weather from '../../assets/projects/weather.jpg'
+import foxbel from '../../assets/projects/foxbel.jpg'
+import peko from '../../assets/projects/peko.jpg'
+import untels from '../../assets/projects/untels.png'
+
 const projects = [
-  {name: "La Tienda Pe '", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/tiendape.jpg'},
-  {name: "Weather Admin Panel", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/weather.jpg'},
-  {name: "Foxbel Music Player", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/foxbel.jpg'},
-  {name: "Peko Cinema", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/peko.jpg'},
-  {name: "Untels Landing Page", image: 'https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/projects/untels.png'}
+  {name: "La Tienda Pe '", image: tiendape},
+  {name: "Weather Admin Panel", image: weather},
+  {name: "Foxbel Music Player", image: foxbel},
+  {name: "Peko Cinema", image: peko},
+  {name: "Untels Landing Page", image: untels}
 ]
 
 function SampleNextArrow({ onClick }) {

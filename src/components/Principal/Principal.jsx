@@ -9,8 +9,18 @@ import BlastText from '../BlastText/BlastText'
 import Scroll from '../Scroll/Scroll'
 import ThreeSphere from '../ThreeSphere/ThreeSphere'
 import Carousel from '../Carousel/Carousel'
-import './Principal.css'
 import Contact from '../Contact/Contact'
+import './Principal.css'
+
+/**
+ * Assets
+ */
+
+import andy from '../../assets/icons/andy.png'
+import mongo from '../../assets/icons/techs/mongo.png'
+import express from '../../assets/icons/techs/express.png'
+import react from '../../assets/icons/techs/react.png'
+import node from '../../assets/icons/techs/node.png'
 
 const Principal = () => {
   const { theme, setChange, change, setLoaderState, setActiveNavbar, emptyFields } = useContext(GlobalContext)
@@ -49,12 +59,12 @@ const Principal = () => {
                 </div>
               </div>
               <div className='imageContainer' data-aos="fade-up" data-aos-duration="2500" data-aos-offset="-500">
-                <img id='profileImage' src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/andy.png" alt="andy canales portfolio" />
+                <img id='profileImage' src={andy} alt="andy canales portfolio" />
                 <div className='techsLogos'>
-                  <img id='mongodb' src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/mongo.png" alt="mongodb" />
-                  <img id='express' src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/express.png" alt="express" />
-                  <img id='react' src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/react.png" alt="react" />
-                  <img id='node' src="https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/techs/node.png" alt="node" />
+                  <img id='mongodb' src={mongo} alt="mongodb" />
+                  <img id='express' src={express} alt="express" />
+                  <img id='react' src={react} alt="react" />
+                  <img id='node' src={node} alt="node" />
                 </div>
               </div>
             </div>

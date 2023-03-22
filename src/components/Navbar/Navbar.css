@@ -54,13 +54,19 @@
     cursor: pointer;
 }
 
-.light .navbarImage{
+.navbarImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* .light .navbarImage{
     background-image: url('https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/logoBlack.png');
 }
 
 .dark .navbarImage{
     background-image: url('https://andyrcr-portfolio.s3.sa-east-1.amazonaws.com/icons/logoWhite.png');
-}
+} */
 
 .navbarTitle{
     height: 30px;
