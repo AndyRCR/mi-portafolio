@@ -63,9 +63,6 @@
         width: 100%;
     }
 
-    .light .frontend, .light .backend, .light .extra{border: none;}
-    .dark .frontend, .dark .backend, .dark .extra{border: none;}
-
     .techs {
         display: grid;
         grid-gap: 10px;
@@ -110,7 +107,7 @@
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     .techs img {
         width: 30px;
     }
